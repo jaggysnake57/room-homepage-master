@@ -1,0 +1,53 @@
+@import '_varibles.scss';
+
+@media screen and (max-width: 550px) {
+	nav {
+		justify-content: center;
+		width: 75%;
+		svg {
+			display: block;
+		}
+		.menuButton {
+			display: block;
+			cursor: pointer;
+		}
+		.logo {
+			display: block;
+			margin: auto;
+		}
+		.collapsibleMenu {
+			// display: none;
+			position: fixed;
+			justify-content: space-around;
+			align-items: center;
+			background-color: $White;
+			width: 100vw;
+			height: 150px;
+			top: 0;
+			left: 0;
+			transform: translateY(-100%);
+			transition: .5s ease-in-out;
+			svg {
+				margin-right: 35px;
+				cursor: pointer;
+			}
+			a {
+				color: $Black;
+			}
+		}
+		.activeNav {
+			transform: translateY(0);
+			transition: .5s ease-in-out;
+		}
+	}
+	.bottomRow {
+		display: block;
+		.imgLeft,
+		.imgRight {
+			width: 100%;
+		}
+		.aboutText {
+			width: 100%;
+		}
+	}
+}

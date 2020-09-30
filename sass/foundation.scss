@@ -1,0 +1,245 @@
+@import '_varibles.scss';
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Spartan', sans-serif;
+	background-color: $Black;
+}
+.container {
+	max-width: 1440px;
+	width: 100%;
+	margin: 0 auto;
+	background-color: $White;
+}
+
+.slideButtons {
+	button {
+		background-color: $Black;
+		border: none;
+		width: 72px;
+		height: 72px;
+		transition: .4s;
+		&:hover {
+			background-color: $Dark-Gray;
+			transition: .4s;
+		}
+	}
+}
+.desktopButton {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+.tabletButton {
+	display: none;
+}
+
+p {
+	font-size: .8em;
+	color: $Dark-Gray;
+	line-height: 20px;
+}
+h2 {
+	font-size: .8em;
+	letter-spacing: 7px;
+	text-transform: uppercase;
+}
+.front {
+	opacity: 1;
+	transition: .5s linear;
+}
+.behind {
+	opacity: 0;
+	transition: .5s linear;
+}
+.frame {
+	z-index: 10;
+	position: relative;
+}
+.slides {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 5;
+}
+/*=============================================
+=            nav            =
+=============================================*/
+
+nav {
+	display: flex;
+	padding: 5px;
+	position: fixed;
+	margin: 50px 0 0 50px;
+	align-items: center;
+	z-index: 20;
+	svg {
+		display: none;
+	}
+	button {
+		background: none;
+		border: none;
+		display: none;
+	}
+	.logo {
+		margin-right: 40px;
+		height: 16px;
+	}
+	.collapsibleMenu {
+		display: flex;
+		justify-content: space-between;
+		width: 350px;
+		a {
+			color: $White;
+			text-decoration: none;
+			text-transform: lowercase;
+			font-size: .9em;
+			margin: 0;
+			position: relative;
+			&:hover::before {
+				content: '';
+				width: 60%;
+				height: 3px;
+				background-color: white;
+				position: absolute;
+				bottom: -10px;
+				left: 20%;
+			}
+		}
+	}
+}
+
+/*=====  End of nav  ======*/
+
+/*=============================================
+=            top bar            =
+=============================================*/
+
+.topRow {
+	display: flex;
+
+	.imgHolder {
+		width: 60%;
+		position: relative;
+		.heroImg {
+			width: 100%;
+			height: 100%;
+		}
+		.frame {
+			z-index: 10;
+			position: relative;
+		}
+		.slides {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 5;
+		}
+	}
+	.titleHolder {
+		width: 40%;
+		position: relative;
+		.titleCard {
+			width: 70%;
+			margin: 19% auto 0 auto;
+			position: relative;
+			h1 {
+				margin-bottom: 15px;
+				font-size: 2em;
+			}
+			a {
+				display: inline-block;
+				color: $Black;
+				text-decoration: none;
+				text-transform: uppercase;
+				letter-spacing: 15px;
+				font-size: .7em;
+				margin-top: 7%;
+				&:hover {
+					color: $Dark-Gray;
+					& path {
+						fill: $Dark-Gray;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*=====  End of top bar  ======*/
+
+/*=============================================
+=            bottom bar            =
+=============================================*/
+
+.bottomRow {
+	display: flex;
+	height: 22%;
+	.imgLeft,
+	.imgRight {
+		width: 30%;
+	}
+	img {
+		width: 100%;
+		height: 100%;
+	}
+	.aboutText {
+		padding: 0 40px;
+		width: 40%;
+	}
+	.aboutText {
+		margin-top: 5%;
+		h2 {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+/*=====  End of bottom bar  ======*/
+
+/*=============================================
+=            laptop screen 1200            =
+=============================================*/
+
+@media screen and (max-width: 1200px) {
+	.topRow {
+		.titleHolder {
+			// background-color: green;
+			.titleCard {
+				margin: 10% auto 0 auto;
+				h1 {
+					margin-bottom: 15px;
+					font-size: 1.7em;
+				}
+				a {
+					margin-top: 5%;
+				}
+			}
+		}
+	}
+	.bottomRow {
+		.aboutText {
+			margin-top: 2%;
+		}
+	}
+}
+
+/*=====  End of laptop screen 1200  ======*/
+
+/*=============================================
+=           large tablet 1024           =
+=============================================*/
+
+@media screen and (max-width: 1024px) {
+	.topRow {
+		.titleHolder {
+			.slideButtons {
+				left: -144px;
+			}
+		}
+	}
+}

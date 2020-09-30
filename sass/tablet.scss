@@ -1,0 +1,42 @@
+@import '_varibles.scss';
+
+@media screen and (max-width: 900px) {
+	.slideButtons {
+		button {
+			height: 60px;
+		}
+	}
+	.desktopButton {
+		display: none;
+	}
+	.tabletButton {
+		display: block;
+		position: absolute;
+		bottom: 5px;
+		right: 0;
+		z-index: 30;
+	}
+	.topRow {
+		display: block;
+		.imgHolder {
+			width: 100%;
+		}
+		.titleHolder {
+			width: 100%;
+			.titleCard {
+				margin: 20px auto;
+			}
+		}
+	}
+	.bottomRow {
+		flex-wrap: wrap;
+		.imgLeft,
+		.imgRight {
+			width: 50%;
+		}
+		.aboutText {
+			order: 3;
+			width: 100%;
+		}
+	}
+}

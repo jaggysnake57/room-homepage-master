@@ -1,0 +1,186 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Spartan', sans-serif;
+  background-color: black; }
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: white; }
+
+.slideButtons button {
+  background-color: black;
+  border: none;
+  width: 72px;
+  height: 72px;
+  transition: .4s; }
+  .slideButtons button:hover {
+    background-color: #a1a1a1;
+    transition: .4s; }
+
+.desktopButton {
+  position: absolute;
+  bottom: 0;
+  left: 0; }
+
+.tabletButton {
+  display: none; }
+
+p {
+  font-size: .8em;
+  color: #a1a1a1;
+  line-height: 20px; }
+
+h2 {
+  font-size: .8em;
+  letter-spacing: 7px;
+  text-transform: uppercase; }
+
+.front {
+  opacity: 1;
+  transition: .5s linear; }
+
+.behind {
+  opacity: 0;
+  transition: .5s linear; }
+
+.frame {
+  z-index: 10;
+  position: relative; }
+
+.slides {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5; }
+
+/*=============================================
+=            nav            =
+=============================================*/
+nav {
+  display: flex;
+  padding: 5px;
+  position: fixed;
+  margin: 50px 0 0 50px;
+  align-items: center;
+  z-index: 20; }
+  nav svg {
+    display: none; }
+  nav button {
+    background: none;
+    border: none;
+    display: none; }
+  nav .logo {
+    margin-right: 40px;
+    height: 16px; }
+  nav .collapsibleMenu {
+    display: flex;
+    justify-content: space-between;
+    width: 350px; }
+    nav .collapsibleMenu a {
+      color: white;
+      text-decoration: none;
+      text-transform: lowercase;
+      font-size: .9em;
+      margin: 0;
+      position: relative; }
+      nav .collapsibleMenu a:hover::before {
+        content: '';
+        width: 60%;
+        height: 3px;
+        background-color: white;
+        position: absolute;
+        bottom: -10px;
+        left: 20%; }
+
+/*=====  End of nav  ======*/
+/*=============================================
+=            top bar            =
+=============================================*/
+.topRow {
+  display: flex; }
+  .topRow .imgHolder {
+    width: 60%;
+    position: relative; }
+    .topRow .imgHolder .heroImg {
+      width: 100%;
+      height: 100%; }
+    .topRow .imgHolder .frame {
+      z-index: 10;
+      position: relative; }
+    .topRow .imgHolder .slides {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 5; }
+  .topRow .titleHolder {
+    width: 40%;
+    position: relative; }
+    .topRow .titleHolder .titleCard {
+      width: 70%;
+      margin: 19% auto 0 auto;
+      position: relative; }
+      .topRow .titleHolder .titleCard h1 {
+        margin-bottom: 15px;
+        font-size: 2em; }
+      .topRow .titleHolder .titleCard a {
+        display: inline-block;
+        color: black;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 15px;
+        font-size: .7em;
+        margin-top: 7%; }
+        .topRow .titleHolder .titleCard a:hover {
+          color: #a1a1a1; }
+          .topRow .titleHolder .titleCard a:hover path {
+            fill: #a1a1a1; }
+
+/*=====  End of top bar  ======*/
+/*=============================================
+=            bottom bar            =
+=============================================*/
+.bottomRow {
+  display: flex;
+  height: 22%; }
+  .bottomRow .imgLeft,
+  .bottomRow .imgRight {
+    width: 30%; }
+  .bottomRow img {
+    width: 100%;
+    height: 100%; }
+  .bottomRow .aboutText {
+    padding: 0 40px;
+    width: 40%; }
+  .bottomRow .aboutText {
+    margin-top: 5%; }
+    .bottomRow .aboutText h2 {
+      margin-bottom: 10px; }
+
+/*=====  End of bottom bar  ======*/
+/*=============================================
+=            laptop screen 1200            =
+=============================================*/
+@media screen and (max-width: 1200px) {
+  .topRow .titleHolder .titleCard {
+    margin: 10% auto 0 auto; }
+    .topRow .titleHolder .titleCard h1 {
+      margin-bottom: 15px;
+      font-size: 1.7em; }
+    .topRow .titleHolder .titleCard a {
+      margin-top: 5%; }
+  .bottomRow .aboutText {
+    margin-top: 2%; } }
+
+/*=====  End of laptop screen 1200  ======*/
+/*=============================================
+=           large tablet 1024           =
+=============================================*/
+@media screen and (max-width: 1024px) {
+  .topRow .titleHolder .slideButtons {
+    left: -144px; } }
